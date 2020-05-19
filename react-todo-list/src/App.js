@@ -34,7 +34,7 @@ function App() {
     <div className = "demo-component">
       <h1>Todo List 2</h1>
       <form>
-        <input placeholder="Add Todo task..." />
+        <input placeholder="Add Todo task..." onChange={handleNewTodoChange} />
         <ul>
           <li>Add styling to your app</li>
           <li>Finish todo app today</li>
