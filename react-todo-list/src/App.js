@@ -13,21 +13,22 @@ function App() {
   function handleNewTodo(e) {
     e.preventDefault()
     if (newTodo === "") return
-    setTodos([...todos, {id: Date.now(), text: newTodo}])
-    e.target.reset()
+    setTodos([...todos, { text: newTodo}])
+    
   }
 
   return (
     <div className = "Todo-lists">
       <h1> Todo List 2</h1>
-      <form onSubmit={handleNewTodo}>
+      <div className= "header">
+        <button onClick={handleNewTodo} type="submit" id="btn">Add</button>
         <input placeholder="Add Todo task..." onChange={handleNewTodoChange} />
         <ul>
           {todos.map((todo) => (
             <li>{todo.text}</li>
           ))}
         </ul>
-      </form>
+        </div> 
     </div>
   )
 }
