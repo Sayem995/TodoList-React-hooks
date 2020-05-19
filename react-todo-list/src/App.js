@@ -30,6 +30,11 @@ import './App.css';
 function App() {
   const [newTodo, setNewTodo] = useState('')
 
+  function handleNewTodoChange(e) {
+    e.preventDefault() 
+    setNewTodo(e.target.value)
+  }
+
   return (
     <div className = "demo-component">
       <h1>Todo List 2</h1>
