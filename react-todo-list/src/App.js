@@ -1,29 +1,3 @@
-// import React, { useState } from "react";
-// import './App.css';
-// import TodoForm from "./components/TodoForm";
-// import TodoList from "./components/TodoList";
-
-// function App() {
-
-//   const [todos, setTodos] = useState([]);
-
-//   function addTodo(todo) {
-//     setTodos([todo, ...todos]);
-//   }
-
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//        <p>React Todo</p>
-//        <TodoForm addTodo={addTodo} />
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { useState } from "react";
 import './App.css';
 
@@ -39,17 +13,19 @@ function App() {
   function handleNewTodo(e) {
     e.preventDefault()
     if (newTodo === "") return
-    console.log(newTodo)
+    setTodos([...todos, {id: Date.now(), text: newTodo}])
+    e.target.reset()
   }
 
   return (
-    <div className = "demo-component">
-      <h1>Todo List 2</h1>
+    <div className = "Todo-lists">
+      <h1> Todo List 2</h1>
       <form onSubmit={handleNewTodo}>
         <input placeholder="Add Todo task..." onChange={handleNewTodoChange} />
         <ul>
-          <li>Add styling to your app</li>
-          <li>Finish todo app today</li>
+          {todos.map((todo) => (
+            <li>{todo.text}</li>
+          ))}
         </ul>
       </form>
     </div>
