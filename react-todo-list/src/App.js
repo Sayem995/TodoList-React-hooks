@@ -29,16 +29,23 @@ import './App.css';
 
 function App() {
   const [newTodo, setNewTodo] = useState('')
+  const [todos, setTodos] = useState([])
 
   function handleNewTodoChange(e) {
     e.preventDefault() 
     setNewTodo(e.target.value)
   }
 
+  function handleNewTodo(e) {
+    e.preventDefault()
+    if (newTodo === "") return
+    console.log(newTodo)
+  }
+
   return (
     <div className = "demo-component">
       <h1>Todo List 2</h1>
-      <form>
+      <form onSubmit={handleNewTodo}>
         <input placeholder="Add Todo task..." onChange={handleNewTodoChange} />
         <ul>
           <li>Add styling to your app</li>
