@@ -13,13 +13,11 @@ function App() {
   function handleNewTodo(e) {
     e.preventDefault()
     if (newTodo === "") return
-    setTodos([...todos, { text: newTodo}])
+    setTodos([...todos, { text: newTodo , id : todos.length}])
   }
 
-  function removeNewTodo(e) {
-    e.preventDefault()
-    newTodo.splice(e.target.value);
-    setTodos([...todos, { text: newTodo}])
+  function removeNewTodo(e,index) {
+     setTodos(todos.filter((todo)=>todo.id != index))
   }
 
   return (
@@ -29,10 +27,14 @@ function App() {
         <input placeholder="Add Todo task..." onChange={handleNewTodoChange} />
         <button onClick={handleNewTodo} type="submit" id="btn">Add</button>
         <ul>
-          {todos.map((todo) => (
+          {todos.map((todo,index) => (
+            <div>
             <li>{todo.text}</li>
+            <button onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn">Delete</button>
+            </div>
+
           ))}
-          <button onClick={removeNewTodo} type="submit" id="btn">Delete</button>
+          
         </ul>
         
         </div> 
