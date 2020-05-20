@@ -46,8 +46,7 @@ body {
   }
 
   #btn {
-    background-color: rgb(121, 121, 187); /* Green */
-    /* border-radius: 20%; */
+    background-color: rgb(121, 121, 187); 
     color: white;
     padding: 12px 20px;
     text-align: center;
@@ -56,6 +55,14 @@ body {
     font-size: 18px;
   }
 
-  
+  #btn2 {
+    background-color: rgb(121, 121, 187); 
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+  }
 
 

@@ -20,6 +20,10 @@ function App() {
      setTodos(todos.filter((todo)=>todo.id != index))
   }
 
+  function updateTodo(e) {
+      setTodos([])  
+  }
+
   return (
     <div className = "Todo-lists">
       <h1> Todo List 2</h1>
@@ -32,7 +36,7 @@ function App() {
               <table>
                 <tr>
                 <li>{todo.text}</li> 
-                <button onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn">Delete</button>
+               <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn2">Delete</button>
                 </tr>
               </table>
             </div>
