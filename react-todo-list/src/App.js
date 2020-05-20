@@ -24,13 +24,17 @@ function App() {
     <div className = "Todo-lists">
       <h1> Todo List 2</h1>
       <div className= "header">
-        <input placeholder="Add Todo task..." onChange={handleNewTodoChange} />
+        <input class="placeholder" placeholder="Add Todo task..." onChange={handleNewTodoChange} />
         <button onClick={handleNewTodo} type="submit" id="btn">Add</button>
         <ul>
           {todos.map((todo,index) => (
-            <div>
-            <li>{todo.text}</li>
-            <button onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn">Delete</button>
+            <div class="table">
+              <table>
+                <tr>
+                <li>{todo.text}</li> 
+                <button onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn">Delete</button>
+                </tr>
+              </table>
             </div>
 
           ))}
