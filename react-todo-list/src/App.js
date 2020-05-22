@@ -3,6 +3,7 @@ import './App.css';
 
 function App() {
   const [newTodo, setNewTodo] = useState('')
+  const [showEditTextbox,setShowEditTextbox] = useState(false);
   const [todos, setTodos] = useState([])
 
   function handleNewTodoChange(e) {
@@ -21,6 +22,7 @@ function App() {
   }
 
   function updateTodo(e, index) {
+    setShowEditTextbox(false);
     debugger
 
       let newTodos = Object.assign([],todos);
@@ -44,9 +46,16 @@ function App() {
                 <tr>
                 <li>{todo.text}</li> 
                <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn2">Delete</button>
-               <input
-               placeholder="Add Todo task..." onChange={handleNewTodoChange}/>
-               <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>updateTodo(e,index)} type="submit" id="btn2">Edit</button>
+              {
+               
+               showEditTextbox ? <div> <input
+               placeholder="Edit Todo task..." onChange={handleNewTodoChange}/>
+               <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>updateTodo(e,index)} type="submit" id="btn2">Edit
+               </button>
+               </div> : null
+              }
+             { showEditTextbox == false ? <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>setShowEditTextbox(true)} type="submit" id="btn2">Edit
+            </button> : null }
                 </tr>
               </table>
             </div>
