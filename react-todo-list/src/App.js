@@ -24,7 +24,7 @@ function App() {
     debugger
 
       let newTodos = Object.assign([],todos);
-      newTodos[index] = {...newTodos[index], text : "abdullah" };
+      newTodos[index] = {...newTodos[index], text : newTodo };
       setTodos(newTodos);
       //todos[index] = {text : "abdullah" , id : index }
    
@@ -44,6 +44,8 @@ function App() {
                 <tr>
                 <li>{todo.text}</li> 
                <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn2">Delete</button>
+               <input
+               placeholder="Add Todo task..." onChange={handleNewTodoChange}/>
                <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>updateTodo(e,index)} type="submit" id="btn2">Edit</button>
                 </tr>
               </table>
