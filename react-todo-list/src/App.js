@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState  , useEffect } from "react";
 import './App.css';
 
 function App() {
@@ -20,8 +20,15 @@ function App() {
      setTodos(todos.filter((todo)=>todo.id != index))
   }
 
-  function updateTodo(e) {
-      setTodos([])  
+  function updateTodo(e, index) {
+    debugger
+
+      let newTodos = Object.assign([],todos);
+      newTodos[index] = {...newTodos[index], text : "abdullah" };
+      setTodos(newTodos);
+      //todos[index] = {text : "abdullah" , id : index }
+   
+      //setTodos(todos.);  
   }
 
   return (
@@ -37,6 +44,7 @@ function App() {
                 <tr>
                 <li>{todo.text}</li> 
                <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>removeNewTodo(e,index)} type="submit" id="btn2">Delete</button>
+               <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>updateTodo(e,index)} type="submit" id="btn2">Edit</button>
                 </tr>
               </table>
             </div>
