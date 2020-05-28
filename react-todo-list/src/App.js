@@ -12,6 +12,11 @@ function App() {
     setNewTodo(e.target.value)
   }
 
+  const onEdit = (index) => {
+    setShowEditTextbox(true);
+    setEditTextBoxId(index);
+  }
+
   function handleNewTodo(e) {
     e.preventDefault()
     if (newTodo === "") return
