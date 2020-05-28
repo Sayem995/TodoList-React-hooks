@@ -60,7 +60,7 @@ function App() {
                </button>
                </div> : null
               }
-             { showEditTextbox == false ? <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>setShowEditTextbox(true)} type="submit" id="btn2">Edit
+             { showEditTextbox == false ? <button style={{ marginLeft: "auto", float: "right" }}onClick={(e)=>onEdit(index)} type="submit" id="btn2">Edit
             </button> : null }
                 </tr>
               </table>
