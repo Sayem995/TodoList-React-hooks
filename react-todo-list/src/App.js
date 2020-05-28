@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [newTodo, setNewTodo] = useState('')
   const [showEditTextbox,setShowEditTextbox] = useState(false);
+  const [editTextBoxId, setEditTextBoxId] = useState("");
   const [todos, setTodos] = useState([])
 
   function handleNewTodoChange(e) {
@@ -23,7 +24,7 @@ function App() {
 
   function updateTodo(e, index) {
     setShowEditTextbox(false);
-    debugger
+    
 
       let newTodos = Object.assign([],todos);
       newTodos[index] = {...newTodos[index], text : newTodo };
