@@ -1,6 +1,7 @@
 import React, { useState  , useEffect } from "react";
 import './App.css';
 import Tasklist from './components/TaskList';
+import Form from './Form';
 
 function App() {
   // const [newTodo, setNewTodo] = useState('')
@@ -43,6 +44,7 @@ function App() {
       <div className="App">
         <h1>Todo List 2</h1>
         <Tasklist />
+        <Form />
       </div>
     )
   }

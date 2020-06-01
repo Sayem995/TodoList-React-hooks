@@ -1,4 +1,5 @@
-import React, { useState, Component } from 'react';
+import React, { useState } from 'react';
+import Form from './Form';
 
 function TaskList() {
 
@@ -20,6 +21,7 @@ return (
     <div class="List">
      <input class="placeholder" placeholder="Add Todo task..." onChange={handleNewTodoChange} />
         <button onClick={handleNewTodo} type="submit" id="btn">Add</button>
+        <Form />
     </div>
 )
 }
