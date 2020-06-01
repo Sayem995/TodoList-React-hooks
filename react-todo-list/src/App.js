@@ -1,9 +1,18 @@
 import React, { useState  , useEffect } from "react";
 import './App.css';
-import Tasklist from './components/TaskList';
-import Form from './Form';
+import Tasklist from './components/TaskDetail';
+
 
 function App() {
+
+  return (
+    <div className="App">
+      <h1>Todo List 2</h1>
+      <Tasklist />
+     
+    </div>
+  )
+}
   // const [newTodo, setNewTodo] = useState('')
   // const [showEditTextbox,setShowEditTextbox] = useState(false);
   // const [editTextBoxId, setEditTextBoxId] = useState("");
@@ -39,15 +48,6 @@ function App() {
        
   // }
 
-  
-    return (
-      <div className="App">
-        <h1>Todo List 2</h1>
-        <Tasklist />
-        <Form />
-      </div>
-    )
-  }
 
   // return (
   //   <div className = "Todo-lists">
