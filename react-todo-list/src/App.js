@@ -2,20 +2,6 @@ import React, { useState  , useEffect } from "react";
 import './App.css';
 import TaskDetail from "./components/TaskDetail";
 
-// import Tasklist from './components/TaskList';
-
-
-// function App() {
-  
-
-//   return (
-//     <div className="App">
-//       <h1>Todo List 2</h1>
-//       <Tasklist />
-     
-//     </div>
-//   )
-// }
 
 function App() {
   const [newTodo, setNewTodo] = useState('')
