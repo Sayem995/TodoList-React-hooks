@@ -8,6 +8,17 @@ import TaskList from './components/TaskList';
 
 import * as serviceWorker from './serviceWorker';
 
+const routing = (
+  <router>
+    <div>
+      <Route path="/" component={App} />
+      <Route path="/todo-list" component={TodoList} />
+      <Route path="/about-us" component={AboutUs} />
+
+    </div>
+  </router>
+)
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
