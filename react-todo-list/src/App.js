@@ -3,6 +3,7 @@ import './App.css';
 import TaskDetail from "./components/TaskDetail";
 
 
+
 function App() {
   const [newTodo, setNewTodo] = useState('')
   const [showEditTextbox,setShowEditTextbox] = useState(false);
@@ -53,6 +54,7 @@ function App() {
           ))}
           
         </ul>
+
         
         </div> 
     </div>

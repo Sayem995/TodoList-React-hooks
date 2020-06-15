@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import TaskDetail from './components/TaskDetail';
 
 
@@ -22,6 +23,9 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Route path="/" component={App} />
+          <Route path="/todo-list" component={TodoList} />
+          <Route path="/about-us" component={AboutUs} />
   </React.StrictMode>,
   document.getElementById('root')
 );
