@@ -36,12 +36,22 @@ ReactDOM.render(
       </div>
 
         <Switch>
-         
           <Route path="/task-detail"> <TaskDetail/> </Route>
         </Switch>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// function Home(){
+//   return <h1>Home</h1>;
+// }
+
+// function About(){
+//   return <h2>About Us</h2>;
+// }
+// function Contact(){
+//   return <h2>Contact Us</h2>;
+// }
 
 serviceWorker.unregister();
