@@ -36,7 +36,7 @@ ReactDOM.render(
       </div>
 
         <Switch>
-          <Route path="/task-detail"> <TaskDetail/> </Route>
+          <Route path="/App"> <App/> </Route>
         </Switch>
     </Router>
   </React.StrictMode>,
