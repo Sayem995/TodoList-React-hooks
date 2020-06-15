@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router, Link, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
 import TaskDetail from './components/TaskDetail';
 
 
@@ -24,10 +24,8 @@ ReactDOM.render(
     <App />
     <Router>
         <Switch>
-          <Link to="/">App</Link> 
-          <Link to="/task-detail">TaskDetail</Link>
-      
-
+          <Route path="/"> <App/> </Route>
+          <Route path="/task-detail"> <TaskDetail/> </Route>
         </Switch>
     </Router>
   </React.StrictMode>,
