@@ -1,4 +1,4 @@
-import React, { useState  , useEffect } from "react";
+import React, { useState  } from "react";
 import './App.css';
 import TaskDetail from "./components/TaskDetail";
 
@@ -27,7 +27,7 @@ function App() {
   }
 
   function removeNewTodo(e,index) {
-     setTodos(todos.filter((todo)=>todo.id != index))
+     setTodos(todos.filter((todo)=>todo.id !== index))
   }
 
   function updateTodo(e, index) {
