@@ -31,7 +31,7 @@ ReactDOM.render(
               <Link to="/AboutUs">About Us</Link>
               <Link to="/ContactUs">Contact Us</Link>
             </h1>
-           </ul>
+            </ul>
         </nav>
       </div>
 

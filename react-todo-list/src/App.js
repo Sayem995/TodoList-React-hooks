@@ -44,19 +44,20 @@ function App() {
   return (
     <div className = "Todo-lists">
       <h1> Todo List 2</h1>
-      <div className= "header">
-        <input class="placeholder" placeholder="Add Todo task..." onChange={handleNewTodoChange} />
-        <button onClick={handleNewTodo} type="submit" id="btn">Add</button>
-        <ul>
-          {todos.map((todo,index) => (
-           <TaskDetail index={index} todo={todo} removeNewTodo={removeNewTodo} updateTodo={updateTodo} onEdit={onEdit} handleNewTodoChange={handleNewTodoChange} showEditTextbox={showEditTextbox} editTextBoxId={editTextBoxId}   />
+        <div className= "header">
+          <input class="placeholder" placeholder="Add Todo task..." onChange={handleNewTodoChange} />
+          <button onClick={handleNewTodo} type="submit" id="btn">Add</button>
+          <ul>
+            {todos.map((todo,index) => (
+            <TaskDetail index={index} todo={todo} removeNewTodo={removeNewTodo} updateTodo={updateTodo} onEdit={onEdit} handleNewTodoChange={handleNewTodoChange} showEditTextbox={showEditTextbox} editTextBoxId={editTextBoxId}   />
 
-          ))}
+            ))}
+            
+          </ul>
+
           
-        </ul>
-
+          </div> 
         
-        </div> 
     </div>
   )
 }
