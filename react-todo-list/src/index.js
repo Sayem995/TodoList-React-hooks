@@ -23,8 +23,20 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <Router>
+      <div>
+        <nav>
+          <ul>
+            <h1>
+              <Link to="/">Home</Link>
+              <Link to="/AboutUs">About Us</Link>
+              <Link to="/ContactUs">Contact Us</Link>
+            </h1>
+           </ul>
+        </nav>
+      </div>
+
         <Switch>
-          <Route path="/"> <App/> </Route>
+         
           <Route path="/task-detail"> <TaskDetail/> </Route>
         </Switch>
     </Router>
